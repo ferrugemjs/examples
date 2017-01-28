@@ -1,0 +1,1 @@
+define(["require","exports"],function(e,i){"use strict";!function(e){e[e.BANANA=0]="BANANA",e[e.GRAPES=1]="GRAPES"}(i.EFruitType||(i.EFruitType={}));i.EFruitType});

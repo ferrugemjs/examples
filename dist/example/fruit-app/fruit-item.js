@@ -1,0 +1,1 @@
+define(["require","exports"],function(t,e){"use strict";var n=function(){function t(){}return t}();e.FruitItem=n});

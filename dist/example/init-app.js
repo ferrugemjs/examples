@@ -1,0 +1,1 @@
+define(["require","exports"],function(t,e){"use strict";var i=function(){function t(){this.title="FerrugemJS"}return t}();e.InitApp=i});
