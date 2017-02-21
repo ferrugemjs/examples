@@ -1,1 +1,80 @@
-define(["exports","incremental-dom","ferrugemjs","./init-app","./header-app/header-app.html","./todo-app/todo-list.html","./hello-world/hello-world.html","./fruit-app/fruit-app.html"],function(t,e,a,p,l,o,r,i){var n=Object.keys(p)[0];p[n].prototype._$style_name$_="init-app",p[n].prototype.render=function(t){t._$style_name$_="init-app",e.elementOpen("header-app","tmp_inst_header_app1486082535661",["is","header-app","id","tmp_inst_header_app1486082535661"],null),e.elementClose("header-app");var p=a["default"].build({classFactory:l["default"],tagName:"header-app",target:"tmp_inst_header_app1486082535661",hostVars:{title:t.title},staticVars:{is:"header-app"}});p.content(function(){}).refresh(),e.elementOpen("hello-world","tmp_inst_hello_world1486082535662",["is","hello-world","id","tmp_inst_hello_world1486082535662"],null),e.elementClose("hello-world");var p=a["default"].build({classFactory:r["default"],tagName:"hello-world",target:"tmp_inst_hello_world1486082535662",hostVars:{name:t.title},staticVars:{is:"hello-world"}});p.content(function(){}).refresh(),e.elementOpen("todo-app","tmp_inst_todo_app1486082535663",["is","todo-app","id","tmp_inst_todo_app1486082535663"],null),e.elementClose("todo-app");var p=a["default"].build({classFactory:o["default"],tagName:"todo-app",target:"tmp_inst_todo_app1486082535663",hostVars:{},staticVars:{is:"todo-app"}});p.content(function(){}).refresh(),e.elementOpen("fruit-app","tmp_inst_fruit_app1486082535664",["is","fruit-app","id","tmp_inst_fruit_app1486082535664"],null),e.elementClose("fruit-app");var p=a["default"].build({classFactory:i["default"],tagName:"fruit-app",target:"tmp_inst_fruit_app1486082535664",hostVars:{},staticVars:{is:"fruit-app"}});p.content(function(){}).refresh()},t["default"]=p[n]});
+define(["exports", "incremental-dom", "ferrugemjs", "./init-app", "./header-app/header-app.html", "./todo-app/todo-list.html", "./hello-world/hello-world.html", "./fruit-app/fruit-app.html"], function(exports, _idom, _libfjs_mod_, _init_app, _header_app, _todo_app, _hello_world, _fruit_app) {
+    var __init_app_tmp = Object.keys(_init_app)[0];
+    exports.default = (function(super_clazz) {
+        function _clazz_sub_1487649377098_tmp() {
+            super_clazz.call(this);
+        }
+        _clazz_sub_1487649377098_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_1487649377098_tmp.prototype.constructor = _clazz_sub_1487649377098_tmp;
+        _clazz_sub_1487649377098_tmp.prototype._$attrs$_ = {
+            "name": "div",
+            "static": [],
+            "dinamic": "\"\""
+        };
+        _clazz_sub_1487649377098_tmp.prototype.render = function($_this_$) {
+            (function() {
+                var _$_inst_$_ = _libfjs_mod_.default.build({
+                    "classFactory": _header_app.default,
+                    "tag": "div",
+                    "alias": "header-app",
+                    "target": "",
+                    "hostVars": {},
+                    "staticVars": {
+                        "key:id": "tmp_key_inst_custom_comp1487649377099",
+                        "is": "header-app"
+                    }
+                });
+                _$_inst_$_.content(function() {});
+                _libfjs_mod_.default.reDraw.call(_$_inst_$_);
+            })();
+            (function() {
+                var _$_inst_$_ = _libfjs_mod_.default.build({
+                    "classFactory": _hello_world.default,
+                    "tag": "div",
+                    "alias": "hello-world",
+                    "target": "",
+                    "hostVars": {
+                        "name": ($_this_$.title)
+                    },
+                    "staticVars": {
+                        "key:id": "tmp_key_inst_custom_comp1487649377100",
+                        "is": "hello-world"
+                    }
+                });
+                _$_inst_$_.content(function() {});
+                _libfjs_mod_.default.reDraw.call(_$_inst_$_);
+            })();
+            (function() {
+                var _$_inst_$_ = _libfjs_mod_.default.build({
+                    "classFactory": _todo_app.default,
+                    "tag": "div",
+                    "alias": "todo-app",
+                    "target": "",
+                    "hostVars": {},
+                    "staticVars": {
+                        "key:id": "tmp_key_inst_custom_comp1487649377101",
+                        "is": "todo-app"
+                    }
+                });
+                _$_inst_$_.content(function() {});
+                _libfjs_mod_.default.reDraw.call(_$_inst_$_);
+            })();
+            (function() {
+                var _$_inst_$_ = _libfjs_mod_.default.build({
+                    "classFactory": _fruit_app.default,
+                    "tag": "div",
+                    "alias": "fruit-app",
+                    "target": "",
+                    "hostVars": {},
+                    "staticVars": {
+                        "key:id": "tmp_key_inst_custom_comp1487649377102",
+                        "is": "fruit-app"
+                    }
+                });
+                _$_inst_$_.content(function() {});
+                _libfjs_mod_.default.reDraw.call(_$_inst_$_);
+            })();
+        }
+        return _clazz_sub_1487649377098_tmp;
+    })(_init_app[__init_app_tmp]);
+});

@@ -1,1 +1,101 @@
-define(["exports","incremental-dom","ferrugemjs","./fruit-app","./fruit-store","./fruit-item.html","../commons/assets/commons-style.css!"],function(e,t,n,l,s,a){var p=document.createElement("style");p.type="text/css",p.innerHTML="   .fruit-app{    }   .fruit-app .fruit-basket{    width:170px;    height:69px;    margin:0px auto;    margin-top:180px;    margin-bottom:20px;    display:block;    background-image:url(dist/example/fruit-app/assets/fruit-basket.png);    background-position:center top;    background-repeat:no-repeat;    overflow:hidden;   }    .fruit-app .fruit-basket .fruit-item{    margin-bottom:129px;   }   .fruit-app .actions .mark-action{    margin-right:5px;   }   .fruit-app .fruits img{    cursor: move;   }  ",document.getElementsByTagName("head")[0].appendChild(p);var i=Object.keys(l)[0];l[i].prototype._$style_name$_="fruit-app example-basic-box",l[i].prototype.render=function(e){e._$style_name$_="fruit-app example-basic-box",t.elementOpen("h3",null,["class","title"],""),t.text("Fruit App"),t.elementClose("h3"),t.elementOpen("div",null,["class","example-basic-box-body"],""),t.elementOpen("div",null,["class","fruits","style","width:100%;margin-top:25px"],""),t.elementOpen("img",null,["draggable","true","data-type","0","style","float:left","src","dist/example/fruit-app/assets/bananas.png"],"ondragstart",e.drag.bind(e,0),"onclick",e.addFruit.bind(e,0)),t.elementClose("img"),t.elementOpen("img",null,["draggable","true","data-type","1","style","float:right","src","dist/example/fruit-app/assets/grapes-bunch.png"],"ondragstart",e.drag.bind(e,1),"onclick",e.addFruit.bind(e,1)),t.elementClose("img"),t.elementClose("div"),t.elementOpen("div",null,["class","fruit-basket"],"ondragover",e.allowDrop.bind(e),"ondrop",e.drop.bind(e)),e.fruits.forEach(function(e,l){t.elementOpen("fruit-item","tmp_inst_fruit_item1486082535666_"+l,["is","fruit-item","id","tmp_inst_fruit_item1486082535666_"+l],null),t.elementClose("fruit-item");var s=n["default"].build({classFactory:a["default"],tagName:"fruit-item",target:"tmp_inst_fruit_item1486082535666_"+l,hostVars:{id:e.id,desc:e.desc,type:e.type},staticVars:{is:"fruit-item"}});s.content(function(){}).refresh()}),t.elementClose("div"),t.elementOpen("p",null,[""],""),t.elementOpen("span",null,["style","float:right"],""),t.text("Fruit count:"+e.fruits.length),t.elementClose("span"),t.elementClose("p"),t.elementOpen("p",null,["class","actions"],"onclick",s["default"].clear.bind(s["default"])),t.elementOpen("span",null,["class","mark-action"],""),t.text("[-]"),t.elementClose("span"),t.elementOpen("span",null,["class","desc"],""),t.text("clear"),t.elementClose("span"),t.elementClose("p"),t.elementClose("div"),t.elementOpen("div",null,["class","list-concepts"],""),t.elementOpen("span",null,[""],""),t.text("Concepts"),t.elementClose("span"),t.elementOpen("span",null,[""],""),t.text("✔"),t.text("drag and drop."),t.elementClose("span"),t.elementOpen("span",null,[""],""),t.text("✔"),t.text("change the css className."),t.elementClose("span"),t.elementOpen("span",null,[""],""),t.text("✔"),t.text("import a css file."),t.elementClose("span"),t.elementOpen("span",null,[""],""),t.text("✔"),t.text("embed style."),t.elementClose("span"),t.elementOpen("span",null,[""],""),t.text("✔"),t.text("one way data binding."),t.elementClose("span"),t.elementOpen("span",null,[""],""),t.text("✔"),t.text("import a sub-element."),t.elementClose("span"),t.elementOpen("span",null,[""],""),t.text("✔"),t.text("working with store."),t.elementClose("span"),t.elementOpen("span",null,[""],""),t.text("✔"),t.text("event emitter."),t.elementClose("span"),t.elementOpen("span",null,[""],""),t.text("✔"),t.text("import other library/script."),t.elementClose("span"),t.elementClose("div")},e["default"]=l[i]});
+define(["exports", "incremental-dom", "ferrugemjs", "./fruit-app", "./fruit-store", "./fruit-item.html", "../commons/assets/commons-style.css!"], function(exports, _idom, _libfjs_mod_, _fruit_app, fruitStore, _fruit_item) {
+    var __fruit_app_tmp = Object.keys(_fruit_app)[0];
+    var tmp_style = document.createElement('style');
+    tmp_style.type = 'text/css';
+    tmp_style.innerHTML = '   .fruit-app{    }   .fruit-app .fruit-basket{    width:170px;    height:69px;    margin:0px auto;    margin-top:180px;    margin-bottom:20px;    display:block;    background-image:url(dist/example/fruit-app/assets/fruit-basket.png);    background-position:center top;    background-repeat:no-repeat;    overflow:hidden;   }    .fruit-app .fruit-basket .fruit-item{    margin-bottom:129px;   }   .fruit-app .actions .mark-action{    margin-right:5px;   }   .fruit-app .fruits img{    cursor: move;   }  ';
+    document.getElementsByTagName('head')[0].appendChild(tmp_style);
+    exports.default = (function(super_clazz) {
+        function _clazz_sub_1487649377104_tmp() {
+            super_clazz.call(this);
+        }
+        _clazz_sub_1487649377104_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_1487649377104_tmp.prototype.constructor = _clazz_sub_1487649377104_tmp;
+        _clazz_sub_1487649377104_tmp.prototype._$attrs$_ = {
+            "name": "div",
+            "static": ["class", "fruit-app example-basic-box"],
+            "dinamic": "\"\""
+        };
+        _clazz_sub_1487649377104_tmp.prototype.render = function($_this_$) {
+            _idom.elementOpen("h3", null, ["class", "title"], "");
+            _idom.text("Fruit App");
+            _idom.elementClose("h3");
+            _idom.elementOpen("div", null, ["class", "example-basic-box-body"], "");
+            _idom.elementOpen("div", null, ["class", "fruits", "style", "width:100%;margin-top:25px"], "");
+            _idom.elementOpen("img", null, ["draggable", "true", "data-type", "0", "style", "float:left", "src", "dist/example/fruit-app/assets/bananas.png"], "ondragstart", ($_this_$.drag.bind($_this_$, 0)), "onclick", ($_this_$.addFruit.bind($_this_$, 0)));
+            _idom.elementClose("img");
+            _idom.elementOpen("img", null, ["draggable", "true", "data-type", "1", "style", "float:right", "src", "dist/example/fruit-app/assets/grapes-bunch.png"], "ondragstart", ($_this_$.drag.bind($_this_$, 1)), "onclick", ($_this_$.addFruit.bind($_this_$, 1)));
+            _idom.elementClose("img");
+            _idom.elementClose("div");
+            _idom.elementOpen("div", null, ["class", "fruit-basket"], "ondragover", ($_this_$.allowDrop.bind($_this_$)), "ondrop", ($_this_$.drop.bind($_this_$)));
+            $_this_$.fruits.forEach(function(fruit, $indx) {
+                (function() {
+                    var _$_inst_$_ = _libfjs_mod_.default.build({
+                        "classFactory": _fruit_item.default,
+                        "tag": "div",
+                        "alias": "fruit-item",
+                        "target": "",
+                        "hostVars": {
+                            "key:id": ('fruit_' + fruit.id),
+                            "id": (fruit.id),
+                            "desc": (fruit.desc),
+                            "type": (fruit.type)
+                        },
+                        "staticVars": {
+                            "is": "fruit-item"
+                        }
+                    });
+                    _$_inst_$_.content(function() {});
+                    _libfjs_mod_.default.reDraw.call(_$_inst_$_);
+                })();
+            });
+            _idom.elementClose("div");
+            _idom.elementOpen("p", null, [""], "");
+            _idom.elementOpen("span", null, ["style", "float:right"], "");
+            _idom.text("Fruit count:" + ($_this_$.fruits.length) + "");
+            _idom.elementClose("span");
+            _idom.elementClose("p");
+            _idom.elementOpen("p", null, ["class", "actions"], "onclick", (fruitStore.default.clear.bind(fruitStore.default)));
+            _idom.elementOpen("span", null, ["class", "mark-action"], "");
+            _idom.text("[-]");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, ["class", "desc"], "");
+            _idom.text("clear");
+            _idom.elementClose("span");
+            _idom.elementClose("p");
+            _idom.elementClose("div");
+            _idom.elementOpen("div", null, ["class", "list-concepts"], "");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("Concepts");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("✔ drag and drop.");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("✔ change the css className.");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("✔ import a css file.");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("✔ embed style.");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("✔ one way data binding.");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("✔ import a sub-element.");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("✔ working with store.");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("✔ event emitter.");
+            _idom.elementClose("span");
+            _idom.elementOpen("span", null, [""], "");
+            _idom.text("✔ import other library/script.");
+            _idom.elementClose("span");
+            _idom.elementClose("div");
+        }
+        return _clazz_sub_1487649377104_tmp;
+    })(_fruit_app[__fruit_app_tmp]);
+});

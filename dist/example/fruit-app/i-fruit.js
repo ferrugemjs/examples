@@ -1,1 +1,8 @@
-define(["require","exports"],function(e,i){"use strict";!function(e){e[e.BANANA=0]="BANANA",e[e.GRAPES=1]="GRAPES"}(i.EFruitType||(i.EFruitType={}));i.EFruitType});
+define(["require", "exports"], function (require, exports) {
+    "use strict";
+    var EFruitType;
+    (function (EFruitType) {
+        EFruitType[EFruitType["BANANA"] = 0] = "BANANA";
+        EFruitType[EFruitType["GRAPES"] = 1] = "GRAPES";
+    })(EFruitType = exports.EFruitType || (exports.EFruitType = {}));
+});

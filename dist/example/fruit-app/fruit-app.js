@@ -1,1 +1,36 @@
-define(["require","exports","./fruit-store"],function(t,e,r){"use strict";var n=function(){function t(){var t=this;r["default"].onChange.subscribe(function(){t.refresh()})}return Object.defineProperty(t.prototype,"fruits",{get:function(){return r["default"].get()},enumerable:!0,configurable:!0}),t.prototype.addFruit=function(t){r["default"].add({desc:"",type:t})},t.prototype.allowDrop=function(t){t.preventDefault()},t.prototype.drag=function(t,e){e.dataTransfer.setData("type",t)},t.prototype.drop=function(t){t.preventDefault();var e=t.dataTransfer.getData("type");this.addFruit(e)},t}();e.FruitApp=n});
+define(["require", "exports", "tslib", "./fruit-store", "./fruit-basic"], function (require, exports, tslib_1, fruit_store_1, fruit_basic_1) {
+    "use strict";
+    var FruitApp = (function (_super) {
+        tslib_1.__extends(FruitApp, _super);
+        function FruitApp() {
+            var _this = _super.call(this) || this;
+            fruit_store_1.default.onChange.subscribe(function () {
+                _this.refresh();
+            });
+            return _this;
+        }
+        Object.defineProperty(FruitApp.prototype, "fruits", {
+            get: function () {
+                return fruit_store_1.default.get();
+            },
+            enumerable: true,
+            configurable: true
+        });
+        FruitApp.prototype.addFruit = function (fruitType) {
+            fruit_store_1.default.add({ desc: '', type: fruitType });
+        };
+        FruitApp.prototype.allowDrop = function (evt) {
+            evt.preventDefault();
+        };
+        FruitApp.prototype.drag = function (fruitType, evt) {
+            evt.dataTransfer.setData("type", fruitType);
+        };
+        FruitApp.prototype.drop = function (evt) {
+            evt.preventDefault();
+            var data = evt.dataTransfer.getData("type");
+            this.addFruit(data);
+        };
+        return FruitApp;
+    }(fruit_basic_1.FruitBasic));
+    exports.FruitApp = FruitApp;
+});

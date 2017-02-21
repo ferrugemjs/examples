@@ -1,1 +1,10 @@
-define(["require","exports"],function(t,e){"use strict";var i=function(){function t(){this.title="FerrugemJS"}return t}();e.InitApp=i});
+define(["require", "exports"], function (require, exports) {
+    "use strict";
+    var InitApp = (function () {
+        function InitApp() {
+            this.title = "FerrugemJS";
+        }
+        return InitApp;
+    }());
+    exports.InitApp = InitApp;
+});

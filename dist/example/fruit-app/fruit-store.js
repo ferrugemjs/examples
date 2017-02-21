@@ -1,1 +1,26 @@
-define(["require","exports","event-emitter-lite"],function(t,e,i){"use strict";var n=function(){function t(){this.onChange=new i.EventEmitter,this.fruits=[]}return t.prototype.get=function(){return this.fruits},t.prototype.add=function(t){t.id=t.id?t.id:this.fruits.length,this.fruits.push(t),this.onChange.emit(null)},t.prototype.clear=function(){this.fruits=[],this.onChange.emit(null)},t}();e.FruitStore=n,Object.defineProperty(e,"__esModule",{value:!0}),e["default"]=new n});
+define(["require", "exports", "event-emitter-lite"], function (require, exports, event_emitter_lite_1) {
+    "use strict";
+    var FruitStore = (function () {
+        function FruitStore() {
+            this.onChange = new event_emitter_lite_1.EventEmitter();
+            this.nextId = 1;
+            this.fruits = [];
+        }
+        FruitStore.prototype.get = function () {
+            return this.fruits;
+        };
+        FruitStore.prototype.add = function (fruit) {
+            fruit.id = this.nextId++;
+            this.fruits.push(fruit);
+            this.onChange.emit(null);
+        };
+        FruitStore.prototype.clear = function () {
+            this.fruits = [];
+            this.onChange.emit(null);
+        };
+        return FruitStore;
+    }());
+    exports.FruitStore = FruitStore;
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.default = new FruitStore();
+});

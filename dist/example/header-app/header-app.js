@@ -1,1 +1,0 @@
-define(["require","exports"],function(e,n){"use strict";var r=function(){function e(){}return e}();n.HeaderApp=r});

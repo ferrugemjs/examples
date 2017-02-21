@@ -1,1 +1,9 @@
-define(["require","exports"],function(t,e){"use strict";var n=function(){function t(){}return t}();e.FruitItem=n});
+define(["require", "exports"], function (require, exports) {
+    "use strict";
+    var FruitItem = (function () {
+        function FruitItem() {
+        }
+        return FruitItem;
+    }());
+    exports.FruitItem = FruitItem;
+});
