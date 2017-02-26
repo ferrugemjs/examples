@@ -5,17 +5,17 @@ define(["exports", "incremental-dom", "ferrugemjs", "./todo-list", "./todo-item.
     tmp_style.innerHTML = '   .todo-list .item-area{    min-height:20px;   }   .todo-list a{    color:#fff;   }  ';
     document.getElementsByTagName('head')[0].appendChild(tmp_style);
     exports.default = (function(super_clazz) {
-        function _clazz_sub_1488079046649_tmp() {
+        function _clazz_sub_1488079904230_tmp() {
             super_clazz.call(this);
         }
-        _clazz_sub_1488079046649_tmp.prototype = Object.create(super_clazz.prototype);
-        _clazz_sub_1488079046649_tmp.prototype.constructor = _clazz_sub_1488079046649_tmp;
-        _clazz_sub_1488079046649_tmp.prototype._$attrs$_ = {
+        _clazz_sub_1488079904230_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_1488079904230_tmp.prototype.constructor = _clazz_sub_1488079904230_tmp;
+        _clazz_sub_1488079904230_tmp.prototype._$attrs$_ = {
             "name": "div",
             "static": [],
             "dinamic": "\"\""
         };
-        _clazz_sub_1488079046649_tmp.prototype.render = function($_this_$) {
+        _clazz_sub_1488079904230_tmp.prototype.render = function($_this_$) {
             _idom.elementOpen("div", null, ["class", "todo-list example-basic-box"], "");
             _idom.elementOpen("h1", null, ["class", "title"], "");
             _idom.text("Todo App");
@@ -24,7 +24,7 @@ define(["exports", "incremental-dom", "ferrugemjs", "./todo-list", "./todo-item.
             _idom.elementOpen("input", null, ["class", "simple", "type", "text", "placeholder", "...do a task!"], "value", (new String('')), "onkeypress", ($_this_$.add.bind($_this_$)));
             _idom.elementClose("input");
             _idom.elementOpen("div", null, ["class", "item-area"], "");
-            $_this_$.itens.forEach(function(item, $key_tmp_1488079046650) {
+            $_this_$.itens.forEach(function(item, $key_tmp_1488079904231) {
                 (function() {
                     var _$_inst_$_ = _libfjs_mod_.default.build({
                         "classFactory": _todo_item.default,
@@ -82,6 +82,6 @@ define(["exports", "incremental-dom", "ferrugemjs", "./todo-list", "./todo-item.
             _idom.elementClose("div");
             _idom.elementClose("div");
         }
-        return _clazz_sub_1488079046649_tmp;
+        return _clazz_sub_1488079904230_tmp;
     })(_todo_list[__todo_list_tmp]);
 });

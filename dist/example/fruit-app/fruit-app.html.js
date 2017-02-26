@@ -5,17 +5,17 @@ define(["exports", "incremental-dom", "ferrugemjs", "./fruit-app", "./fruit-stor
     tmp_style.innerHTML = '   .fruit-app{    }   .fruit-app .fruits{    width: 420px;    margin-top:20px;    float: left;   }   .fruit-app .fruit-basket{    width:420px;    text-align: center;    height:69px;    margin-top:180px;    margin-bottom:20px;    background-image:url(dist/example/fruit-app/assets/fruit-basket.png);    background-position:center top;    background-repeat:no-repeat;    overflow:hidden;   }    .fruit-app .fruit-basket .fruit-item{    margin-bottom:129px;   }   .fruit-app .actions{    width:420px;   }   .fruit-app .actions .mark-action{    margin-right:5px;   }   .fruit-app .fruits img{    cursor: move;   }  ';
     document.getElementsByTagName('head')[0].appendChild(tmp_style);
     exports.default = (function(super_clazz) {
-        function _clazz_sub_1488079046634_tmp() {
+        function _clazz_sub_1488079904215_tmp() {
             super_clazz.call(this);
         }
-        _clazz_sub_1488079046634_tmp.prototype = Object.create(super_clazz.prototype);
-        _clazz_sub_1488079046634_tmp.prototype.constructor = _clazz_sub_1488079046634_tmp;
-        _clazz_sub_1488079046634_tmp.prototype._$attrs$_ = {
+        _clazz_sub_1488079904215_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_1488079904215_tmp.prototype.constructor = _clazz_sub_1488079904215_tmp;
+        _clazz_sub_1488079904215_tmp.prototype._$attrs$_ = {
             "name": "div",
             "static": [],
             "dinamic": "\"\""
         };
-        _clazz_sub_1488079046634_tmp.prototype.render = function($_this_$) {
+        _clazz_sub_1488079904215_tmp.prototype.render = function($_this_$) {
             _idom.elementOpen("div", null, ["class", "fruit-app example-basic-box"], "");
             _idom.elementOpen("h1", null, ["class", "title"], "");
             _idom.text("Fruit App");
@@ -95,6 +95,6 @@ define(["exports", "incremental-dom", "ferrugemjs", "./fruit-app", "./fruit-stor
             _idom.elementClose("div");
             _idom.elementClose("div");
         }
-        return _clazz_sub_1488079046634_tmp;
+        return _clazz_sub_1488079904215_tmp;
     })(_fruit_app[__fruit_app_tmp]);
 });

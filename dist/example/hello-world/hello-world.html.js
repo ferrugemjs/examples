@@ -1,17 +1,17 @@
 define(["exports", "incremental-dom", "ferrugemjs", "./hello-world", "../commons/assets/commons-style.css!"], function(exports, _idom, _libfjs_mod_, _hello_world) {
     var __hello_world_tmp = Object.keys(_hello_world)[0];
     exports.default = (function(super_clazz) {
-        function _clazz_sub_1488079046645_tmp() {
+        function _clazz_sub_1488079904226_tmp() {
             super_clazz.call(this);
         }
-        _clazz_sub_1488079046645_tmp.prototype = Object.create(super_clazz.prototype);
-        _clazz_sub_1488079046645_tmp.prototype.constructor = _clazz_sub_1488079046645_tmp;
-        _clazz_sub_1488079046645_tmp.prototype._$attrs$_ = {
+        _clazz_sub_1488079904226_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_1488079904226_tmp.prototype.constructor = _clazz_sub_1488079904226_tmp;
+        _clazz_sub_1488079904226_tmp.prototype._$attrs$_ = {
             "name": "div",
             "static": [],
             "dinamic": "\"\""
         };
-        _clazz_sub_1488079046645_tmp.prototype.render = function($_this_$) {
+        _clazz_sub_1488079904226_tmp.prototype.render = function($_this_$) {
             _idom.elementOpen("div", null, ["class", "example-basic-box"], "");
             _idom.elementOpen("h1", null, ["class", "title"], "");
             _idom.text("Hello World");
@@ -46,6 +46,6 @@ define(["exports", "incremental-dom", "ferrugemjs", "./hello-world", "../commons
             _idom.elementClose("div");
             _idom.elementClose("div");
         }
-        return _clazz_sub_1488079046645_tmp;
+        return _clazz_sub_1488079904226_tmp;
     })(_hello_world[__hello_world_tmp]);
 });
