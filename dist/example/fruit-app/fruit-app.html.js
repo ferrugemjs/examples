@@ -2,25 +2,26 @@ define(["exports", "incremental-dom", "ferrugemjs", "./fruit-app", "./fruit-stor
     var __fruit_app_tmp = Object.keys(_fruit_app)[0];
     var tmp_style = document.createElement('style');
     tmp_style.type = 'text/css';
-    tmp_style.innerHTML = '   .fruit-app{    }   .fruit-app .fruit-basket{    width:170px;    height:69px;    margin:0px auto;    margin-top:180px;    margin-bottom:20px;    display:block;    background-image:url(dist/example/fruit-app/assets/fruit-basket.png);    background-position:center top;    background-repeat:no-repeat;    overflow:hidden;   }    .fruit-app .fruit-basket .fruit-item{    margin-bottom:129px;   }   .fruit-app .actions .mark-action{    margin-right:5px;   }   .fruit-app .fruits img{    cursor: move;   }  ';
+    tmp_style.innerHTML = '   .fruit-app{    }   .fruit-app .fruits{    width: 420px;    margin-top:20px;    float: left;   }   .fruit-app .fruit-basket{    width:420px;    text-align: center;    height:69px;    margin-top:180px;    margin-bottom:20px;    background-image:url(dist/example/fruit-app/assets/fruit-basket.png);    background-position:center top;    background-repeat:no-repeat;    overflow:hidden;   }    .fruit-app .fruit-basket .fruit-item{    margin-bottom:129px;   }   .fruit-app .actions{    width:420px;   }   .fruit-app .actions .mark-action{    margin-right:5px;   }   .fruit-app .fruits img{    cursor: move;   }  ';
     document.getElementsByTagName('head')[0].appendChild(tmp_style);
     exports.default = (function(super_clazz) {
-        function _clazz_sub_1487649377104_tmp() {
+        function _clazz_sub_1488079046634_tmp() {
             super_clazz.call(this);
         }
-        _clazz_sub_1487649377104_tmp.prototype = Object.create(super_clazz.prototype);
-        _clazz_sub_1487649377104_tmp.prototype.constructor = _clazz_sub_1487649377104_tmp;
-        _clazz_sub_1487649377104_tmp.prototype._$attrs$_ = {
+        _clazz_sub_1488079046634_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_1488079046634_tmp.prototype.constructor = _clazz_sub_1488079046634_tmp;
+        _clazz_sub_1488079046634_tmp.prototype._$attrs$_ = {
             "name": "div",
-            "static": ["class", "fruit-app example-basic-box"],
+            "static": [],
             "dinamic": "\"\""
         };
-        _clazz_sub_1487649377104_tmp.prototype.render = function($_this_$) {
-            _idom.elementOpen("h3", null, ["class", "title"], "");
+        _clazz_sub_1488079046634_tmp.prototype.render = function($_this_$) {
+            _idom.elementOpen("div", null, ["class", "fruit-app example-basic-box"], "");
+            _idom.elementOpen("h1", null, ["class", "title"], "");
             _idom.text("Fruit App");
-            _idom.elementClose("h3");
+            _idom.elementClose("h1");
             _idom.elementOpen("div", null, ["class", "example-basic-box-body"], "");
-            _idom.elementOpen("div", null, ["class", "fruits", "style", "width:100%;margin-top:25px"], "");
+            _idom.elementOpen("div", null, ["class", "fruits"], "");
             _idom.elementOpen("img", null, ["draggable", "true", "data-type", "0", "style", "float:left", "src", "dist/example/fruit-app/assets/bananas.png"], "ondragstart", ($_this_$.drag.bind($_this_$, 0)), "onclick", ($_this_$.addFruit.bind($_this_$, 0)));
             _idom.elementClose("img");
             _idom.elementOpen("img", null, ["draggable", "true", "data-type", "1", "style", "float:right", "src", "dist/example/fruit-app/assets/grapes-bunch.png"], "ondragstart", ($_this_$.drag.bind($_this_$, 1)), "onclick", ($_this_$.addFruit.bind($_this_$, 1)));
@@ -44,24 +45,21 @@ define(["exports", "incremental-dom", "ferrugemjs", "./fruit-app", "./fruit-stor
                             "is": "fruit-item"
                         }
                     });
-                    _$_inst_$_.content(function() {});
                     _libfjs_mod_.default.reDraw.call(_$_inst_$_);
                 })();
             });
             _idom.elementClose("div");
-            _idom.elementOpen("p", null, [""], "");
-            _idom.elementOpen("span", null, ["style", "float:right"], "");
-            _idom.text("Fruit count:" + ($_this_$.fruits.length) + "");
-            _idom.elementClose("span");
-            _idom.elementClose("p");
-            _idom.elementOpen("p", null, ["class", "actions"], "onclick", (fruitStore.default.clear.bind(fruitStore.default)));
+            _idom.elementOpen("div", null, ["class", "actions"], "onclick", (fruitStore.default.clear.bind(fruitStore.default)));
             _idom.elementOpen("span", null, ["class", "mark-action"], "");
             _idom.text("[-]");
             _idom.elementClose("span");
             _idom.elementOpen("span", null, ["class", "desc"], "");
             _idom.text("clear");
             _idom.elementClose("span");
-            _idom.elementClose("p");
+            _idom.elementOpen("span", null, ["style", "float:right"], "");
+            _idom.text("Fruit count:" + ($_this_$.fruits.length) + "");
+            _idom.elementClose("span");
+            _idom.elementClose("div");
             _idom.elementClose("div");
             _idom.elementOpen("div", null, ["class", "list-concepts"], "");
             _idom.elementOpen("span", null, [""], "");
@@ -95,7 +93,8 @@ define(["exports", "incremental-dom", "ferrugemjs", "./fruit-app", "./fruit-stor
             _idom.text("✔ import other library/script.");
             _idom.elementClose("span");
             _idom.elementClose("div");
+            _idom.elementClose("div");
         }
-        return _clazz_sub_1487649377104_tmp;
+        return _clazz_sub_1488079046634_tmp;
     })(_fruit_app[__fruit_app_tmp]);
 });
