@@ -5,17 +5,17 @@ define(["exports", "incremental-dom", "ferrugemjs", "./todo-item"], function(exp
     tmp_style.innerHTML = '   .todo-item .is-done span.desc{    text-decoration:line-through;   }   .todo-item .mark-action{    width: 28px;    float: left;   }  ';
     document.getElementsByTagName('head')[0].appendChild(tmp_style);
     exports.default = (function(super_clazz) {
-        function _clazz_sub_1488079904228_tmp() {
+        function _clazz_sub_1488608205469_tmp() {
             super_clazz.call(this);
         }
-        _clazz_sub_1488079904228_tmp.prototype = Object.create(super_clazz.prototype);
-        _clazz_sub_1488079904228_tmp.prototype.constructor = _clazz_sub_1488079904228_tmp;
-        _clazz_sub_1488079904228_tmp.prototype._$attrs$_ = {
+        _clazz_sub_1488608205469_tmp.prototype = Object.create(super_clazz.prototype);
+        _clazz_sub_1488608205469_tmp.prototype.constructor = _clazz_sub_1488608205469_tmp;
+        _clazz_sub_1488608205469_tmp.prototype._$attrs$_ = {
             "name": "div",
             "static": ["class", "todo-item"],
             "dinamic": "\"\""
         };
-        _clazz_sub_1488079904228_tmp.prototype.render = function($_this_$) {
+        _clazz_sub_1488608205469_tmp.prototype.render = function($_this_$) {
             _idom.elementOpen("p", null, [""], "class", (($_this_$.done ? 'is-done' : '')));
             _idom.elementOpen("span", null, ["class", "mark-action"], "onclick", ($_this_$.MarkAsDone.bind($_this_$)));
             _idom.text("[" + (($_this_$.done ? 'x' : ' ')) + "]");
@@ -25,6 +25,6 @@ define(["exports", "incremental-dom", "ferrugemjs", "./todo-item"], function(exp
             _idom.elementClose("span");
             _idom.elementClose("p");
         }
-        return _clazz_sub_1488079904228_tmp;
+        return _clazz_sub_1488608205469_tmp;
     })(_todo_item[__todo_item_tmp]);
 });
